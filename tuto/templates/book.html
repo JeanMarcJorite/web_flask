@@ -10,6 +10,7 @@
         {% for book in data %}
             <li>
                 <img src="{{ book.img }}" alt="{{ book.title }}">
+                <img src="{{ url_for('static', filename='images/' + book.img) }}" alt="{{ book.title }}">
                 <h2>{{ book.title }}</h2>
                 <p>Author: {{ book.author }}</p>
                 <p>Price: {{ book.price }}</p>
